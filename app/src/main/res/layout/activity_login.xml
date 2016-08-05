@@ -11,82 +11,106 @@
     tools:context="com.example.eliza.iclass.LoginActivity"
     android:weightSum="1">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1.07"
-        android:id="@+id/linearLayout"></LinearLayout>
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="77dp"
         android:layout_height="100dp"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/logopng"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:textSize="12dp"
+        android:padding="13dp"
+        android:id="@+id/txt_usuario"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#c1dffd"
+        android:textColorHint="#c1dffd"
+
+        android:fontFamily="Roboto"
+        android:background="@drawable/style_text"
+        android:hint="Usuario"
+        android:typeface="normal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="282dp" />
+
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:textSize="12dp"
+        android:padding="13dp"
+        android:inputType="textPassword"
+        android:id="@+id/txt_password"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#c1dffd"
+        android:textColorHint="#c1dffd"
+
+        android:fontFamily="Roboto"
+        android:background="@drawable/style_text"
+        android:hint="Contraseña"
+        android:typeface="normal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="328dp" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="Inicia Sesión"
+        android:id="@+id/button"
+        android:background="@drawable/style_button"
+        android:textColor="#FFF"
+
+        android:fontFamily="Roboto"
+        android:textSize="12dp"
+        android:layout_marginTop="376dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="Registrate"
+        android:id="@+id/button2"
+        android:background="@drawable/style_button_g"
+        android:layout_marginTop="446dp"
+        android:textColor="#208def"
+
+        android:fontFamily="Roboto"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="o"
+        android:id="@+id/textView"
+        android:textColor="#c1dffd"
+
+        android:fontFamily="Roboto"
+        android:textSize="14dp"
+        android:layout_marginTop="423dp"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="iClass"
-        android:id="@+id/textView"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Iclass 2016"
+        android:id="@+id/textView2"
+        android:textColor="#fff"
 
-        android:layout_below="@+id/imageView"
+        android:fontFamily="Roboto"
+        android:textSize="12dp"
+
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:id="@+id/editText"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="#FFF"
-        android:textColorHint="#FFF"
-        android:background="@drawable/style_text"
-        android:hint="Usuario"
-        android:typeface="normal"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
-
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColorHint="#FFF"
-        android:textColor="#FFF"
-        android:background="@drawable/style_text"
-        android:hint="Contraseña"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:typeface="normal" />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="Inicia Sesión"
-        android:id="@+id/button"
-        android:background="@drawable/style_button"
-        android:textColor="#FFF"
-        android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:background="@drawable/style_buttonG"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
-
 
 </RelativeLayout>
