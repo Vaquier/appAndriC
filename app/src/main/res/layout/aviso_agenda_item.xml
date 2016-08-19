@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="65.5dp"
+        android:layout_height="65.5dp"
+        android:id="@+id/alerta"
+        android:background="@drawable/boton_alerta_abajo"
+        android:layout_marginRight="16.1dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="12.1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Junta padres de familia"
+            android:fontFamily="Roboto"
+            android:textColor="#185999"
+            android:textSize="12dp"
+            android:id="@+id/titulo"/>
+        <TextView
+            android:layout_marginTop="12.1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 julio - 8:00 pm"
+            android:fontFamily="Roboto"
+            android:textColor="#185999"
+            android:textSize="12dp"
+            android:id="@+id/fecha"/>
+    </LinearLayout>
+</LinearLayout>
+
+

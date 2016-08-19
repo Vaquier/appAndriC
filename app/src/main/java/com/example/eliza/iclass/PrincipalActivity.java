@@ -42,11 +42,11 @@ public class PrincipalActivity extends AppCompatActivity {
             NavItms.add(new item_objct(titulos[g]));
         NavAdapter = new NavigationAdapter(this, NavItms);
         NavList.setAdapter(NavAdapter);
-        Fragment fragment = new Avisos_completo();
+        Fragment fragment = new Agenda();
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-        setTitle(titulos[1]);
+        setTitle(titulos[2]);
         NavList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id){
@@ -58,6 +58,9 @@ public class PrincipalActivity extends AppCompatActivity {
                     case 1:
                         fragment =  new Avisos_completo();
                         break;
+                    case 2:
+                        fragment =  new Agenda();
+                        break;
                     case 3:
                         fragment =  new Tareas_completo();
                         break;
@@ -65,8 +68,8 @@ public class PrincipalActivity extends AppCompatActivity {
                         fragment =  new Contingencias_completo();
                         break;
                     default:
-                        position = 1;
-                        fragment = new Avisos_completo();
+                        position = 2;
+                        fragment = new Agenda();
                         break;
                 }
                 if(fragment != null){

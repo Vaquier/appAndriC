@@ -3,106 +3,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.eliza.iclass.Agenda">
-
-<LinearLayout
+    android:layout_marginTop="63dp"
+    tools:context=".Principal"
+    android:weightSum="1"
+    android:background="#fff">
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="151.2dp"
     android:orientation="vertical"
     android:background="#1F86EC"
-    android:gravity="center"
-    >
+    android:gravity="center">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
         <LinearLayout
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="33dp"
-            android:orientation="vertical"
-            >
-            <Button
+            android:orientation="vertical">
+            <ImageView
                 android:layout_width="65.5dp"
                 android:layout_height="65.5dp"
                 android:id="@+id/calendario"
-                android:background="@drawable/item_circularButton"
-                />
+                android:background="@drawable/calendario_presionado"/>
             <TextView
                 android:layout_marginTop="12.1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendario"
-                />
+                android:text="Calendario"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginLeft="33dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            >
-            <Button
+            android:gravity="center">
+            <ImageView
                 android:layout_width="65.5dp"
                 android:layout_height="65.5dp"
                 android:id="@+id/alertas"
-                android:background="@drawable/item_circularButton"
-                />
+                android:background="@drawable/boton_alerta"/>
             <TextView
                 android:layout_marginTop="12.1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alertas"
-                />
+                android:text="Alertas"/>
         </LinearLayout>
-
+    </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/calendarView" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:layout_width="65.5dp"
-            android:layout_height="65.5dp"
-            android:id="@+id/alerta"
-            android:background="@drawable/item_circularButton"
-            android:layout_marginRight="16.1dp"
-            />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:minHeight="100dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset" >
         <LinearLayout
-            android:layout_width="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:numColumns="2"
+            android:padding="5dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
             android:orientation="vertical"
-           >
-            <TextView
-                android:layout_marginTop="12.1dp"
-                android:layout_width="wrap_content"
+            android:background="#FFFFFF">
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:id="@+id/calendarioDetalles"
+                android:theme="@style/Theme.Custom"
+                android:showWeekNumber="false"
+                android:visibility="visible"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Junta padres de familia"
-                android:fontFamily="Roboto"
-                android:textColor="#185999"
-                android:textSize="12dp"
-                />
-            <TextView
-                android:layout_marginTop="12.1dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12 julio - 8:00 pm"
-                android:fontFamily="Roboto"
-                android:textColor="#185999"
-                android:textSize="12dp"
-                />
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:scrollIndicators="top">
+                <ImageView
+                    android:layout_width="65.5dp"
+                    android:layout_height="65.5dp"
+                    android:id="@+id/alerta"
+                    android:background="@drawable/boton_alerta_abajo"
+                    android:layout_marginRight="16.1dp"
+                    android:adjustViewBounds="false"
+                    android:baselineAlignBottom="true"
+                    android:contentDescription="alert" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginTop="12.1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Junta padres de familia"
+                        android:fontFamily="Roboto"
+                        android:textColor="#185999"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:layout_marginTop="12.1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 julio - 8:00 pm"
+                        android:fontFamily="Roboto"
+                        android:textColor="#185999"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
 </LinearLayout>

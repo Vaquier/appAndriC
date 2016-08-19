@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="63dp"
+    tools:context="com.example.eliza.iclass.Agenda"
+    android:weightSum="1"
+android:background="#fff"
+    >
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="151.2dp"
+    android:orientation="vertical"
+    android:background="#1F86EC"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="65.5dp"
+                android:layout_height="65.5dp"
+                android:id="@+id/calendario"
+                android:background="@drawable/calendario_presionado"
+                />
+            <TextView
+                android:layout_marginTop="12.1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendario"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="33dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="65.5dp"
+                android:layout_height="65.5dp"
+                android:id="@+id/alertas"
+                android:background="@drawable/boton_alerta"
+                />
+            <TextView
+                android:layout_marginTop="12.1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alertas"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:id="@+id/calendarioDetalles"
+
+        android:showWeekNumber="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:scrollIndicators="top">
+        <ImageView
+            android:layout_width="65.5dp"
+            android:layout_height="65.5dp"
+            android:id="@+id/alerta"
+            android:background="@drawable/boton_alerta_abajo"
+            android:layout_marginRight="16.1dp"
+            android:adjustViewBounds="false"
+            android:baselineAlignBottom="true"
+            android:contentDescription="alert" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+            <TextView
+                android:layout_marginTop="12.1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Junta padres de familia"
+                android:fontFamily="Roboto"
+                android:textColor="#185999"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:layout_marginTop="12.1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 julio - 8:00 pm"
+                android:fontFamily="Roboto"
+                android:textColor="#185999"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

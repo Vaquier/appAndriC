@@ -59,7 +59,7 @@ public class Contingencias_completo extends Fragment {
                 }
                 */
                 listContingencias = new ArrayList<contingencia>();
-                for(int g=0; g< 1; g++){
+                for(int g=0; g< 3; g++){
                     listContingencias.add(new contingencia(g+1,"Su niño se murio :D"));
                 }
                 setTab();
