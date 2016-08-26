@@ -27,8 +27,8 @@
             <ImageView
                 android:layout_width="65.5dp"
                 android:layout_height="65.5dp"
-                android:id="@+id/calendario"
-                android:background="@drawable/calendario_presionado"/>
+                android:id="@+id/btn_calendario"
+                android:background="@drawable/boton_calendario"/>
             <TextView
                 android:layout_marginTop="12.1dp"
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             <ImageView
                 android:layout_width="65.5dp"
                 android:layout_height="65.5dp"
-                android:id="@+id/alertas"
+                android:id="@+id/btn_alertas"
                 android:background="@drawable/boton_alerta"/>
             <TextView
                 android:layout_marginTop="12.1dp"

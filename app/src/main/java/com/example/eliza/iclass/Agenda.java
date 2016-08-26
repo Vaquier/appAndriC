@@ -10,7 +10,9 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.sql.Statement;
@@ -23,20 +25,19 @@ public class Agenda extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.fragment_agenda, container, false);
 
-
-
-        return inflater.inflate(R.layout.fragment_agenda, container, false);
+        return rootView;
     }
 
-
+    ImageView btnAlertas, btnCalendario;
     View rootView;
     private Statement statement = null;
     private java.sql.ResultSet resultSet = null;
     private ArrayList<aviso> listAvisos;
     public Intent i;
     private int idAviso = 0;
-
+    boolean bandera = true;
 
     private class getDataAgenda extends AsyncTask<Void, Void, Void> {
 
@@ -104,6 +105,34 @@ public class Agenda extends Fragment {
         return tmp;
     }
     public void onResume(){
+        btnAlertas = (ImageView) getView().findViewById(R.id.btn_alertas);
+        btnCalendario = (ImageView) getView().findViewById(R.id.btn_calendario);
+        btnCalendario.setImageResource(R.drawable.calendario_presionado);
+
+        btnAlertas.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick( View v){
+                if(bandera){
+                    btnAlertas.setImageResource(R.drawable.alerta_presionado);
+                    btnCalendario.setImageResource(R.drawable.boton_calendario);
+                }
+
+                bandera = false;
+
+            }
+        });
+        btnCalendario.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick( View v){
+                if(!bandera){
+                    btnAlertas.setImageResource(R.drawable.boton_alerta);
+                    btnCalendario.setImageResource(R.drawable.calendario_presionado);
+                }
+                bandera = true;
+
+
+            }
+        });
         super.onResume();
 
     }
